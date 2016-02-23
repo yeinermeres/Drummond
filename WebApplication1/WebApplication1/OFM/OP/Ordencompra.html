@@ -1,0 +1,201 @@
+﻿<style>
+    .input_table {
+        text-align: center;
+        border-radius: 0;
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: rgba(0,0,0,.12);
+        font: 400 15px/18px Roboto,sans-serif;
+        box-shadow: inset 0 -1px 0 transparent;
+        box-sizing: border-box;
+        padding: 12px 4px;
+        background: 0 0;
+        width: 100%;
+        display: block;
+    }
+
+    input {
+        -webkit-appearance: textfield;
+        background-color: white;
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial;
+        -webkit-rtl-ordering: logical;
+        -webkit-user-select: text;
+        cursor: auto;
+        padding: 1px;
+        border: 2px inset;
+    }
+</style>
+
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <ol class="breadcrumb">
+            <li>
+                <a href="#/">Inicio</a>
+            </li>
+            <li>
+                <a>Oferta Mercantil</a>
+            </li>
+            <li class="active">
+                <strong>Ordenes de compra</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title" style="border-bottom:inset;border-top:inset;">
+                    <h5>Registrar Proyectos </h5>
+                </div>
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="DatoBasic#tab-1">Información del Basica</a></li>
+                        <li class=""><a data-toggle="tab" href="DatoBasic#tab-2">Actividad</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+
+                                <div class="form-group col-lg-4">
+                                    <label>Nº  de Contrato</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+
+                                <div class="form-group col-lg-4" id="data_1">
+                                    <label>Nº  de PO</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+
+                                <div class="form-group col-lg-4" id="data_1">
+                                    <label class="font-noraml">Fecha de Inicio</label>
+                                    <div class="input-group date">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </span><input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-4">
+                                    <label>Comprador</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+
+                                <div class="form-group col-lg-4">
+                                    <label>Jurisdicción</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+
+                                <div class="form-group col-lg-4">
+                                    <label>AFE</label>
+                                    <input type="text" placeholder="" class="form-control">
+                                </div>
+                                <h3>Información del Contacto</h3>
+                                <hr>
+                                <div class="form-group col-lg-12">
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Correo</th>
+                                                <th>Telefono</th>
+                                                <th>Celular</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text" class="input_table form-control" placeholder="Carlos"></td>
+                                                <td><input type="text" class="input_table form-control" placeholder="@example.com"></td>
+                                                <td><input type="text" class="input_table  form-control" placeholder="0000000"></td>
+                                                <td> <input type="text" class="input_table  form-control" placeholder="0000000"></td>
+                                                <td><center><button class="btn btn-outline btn-primary dim" type="button"><i class="fa fa-plus"></i></button></center></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                            <div class="panel-body">
+
+                                <div class="form-group col-lg-12">
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Producto</th>
+                                                <th>Cantidad</th>
+                                                <th>Unidad</th>
+                                                <th>Valor Unitario</th>
+                                                <th>Valor Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng:repeat="item in invoice.items">
+                                                <td><input type="text" class="input_table form-control" placeholder="" ng:model="item.description"></td>
+                                                <td><input type="text" class="input_table form-control" placeholder="" ng:model="item.qty" ng:required></td>
+                                                <td><input type="text" class="input_table  form-control" placeholder="" ng-model="item.Unidad"></td>
+                                                <td><input type="text" class="input_table  form-control" placeholder="" ng:model="item.cost" ng:required></td>
+                                                <td><input type="text" disabled="true" class="input_table  form-control" value="{{item.qty * item.cost | currency}}"></td>
+                                                <td><center><button ng:click="removeItem($index)" class="btn btn-outline btn-primary dim" type="button"><i class="fa fa-trash"></i></button></center></td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href ng:click="addItem()" class="btn btn-primary">Nuevo Campo</a></td>
+                                                <td></td>
+                                                <td><h3>Total:</h3></td>
+                                                <td><h3>{{total() | currency}}</h3></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+
+
+                                <br />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $('#data_1 .input-group.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
+        });
+
+    });
+
+</script>
+
+

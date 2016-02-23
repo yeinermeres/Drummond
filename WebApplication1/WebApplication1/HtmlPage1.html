@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#v').click(function () {
+                aa();
+            });
+
+            function aa() {
+                $.post("http://localhost:49372/api/Prueba", function (data) {
+                    alert("Data Loaded: " + data);
+                });
+            }
+        })
+    </script>
+</head>
+<body>
+    <button type="button" id="v">aaaa</button>
+</body>
+</html>

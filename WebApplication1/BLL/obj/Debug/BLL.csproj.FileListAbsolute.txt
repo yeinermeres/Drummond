@@ -1,0 +1,154 @@
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\BLL.dll.config
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\BLL.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\BLL.pdb
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\Dal.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\Entity.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\EntityFramework.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\Dal.pdb
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\Entity.pdb
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\EntityFramework.xml
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\obj\Debug\BLL.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebDrummond\BLL\obj\Debug\BLL.pdb
+I:\WebDrummond\BLL\bin\Debug\BLL.dll.config
+I:\WebDrummond\BLL\bin\Debug\BLL.dll
+I:\WebDrummond\BLL\bin\Debug\BLL.pdb
+I:\WebDrummond\BLL\bin\Debug\Dal.dll
+I:\WebDrummond\BLL\bin\Debug\Entity.dll
+I:\WebDrummond\BLL\bin\Debug\EntityFramework.dll
+I:\WebDrummond\BLL\bin\Debug\EntityFramework.SqlServer.dll
+I:\WebDrummond\BLL\bin\Debug\Dal.pdb
+I:\WebDrummond\BLL\bin\Debug\Entity.pdb
+I:\WebDrummond\BLL\bin\Debug\EntityFramework.xml
+I:\WebDrummond\BLL\bin\Debug\EntityFramework.SqlServer.xml
+I:\WebDrummond\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+I:\WebDrummond\BLL\obj\Debug\BLL.dll
+I:\WebDrummond\BLL\obj\Debug\BLL.pdb
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\BLL.dll.config
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\BLL.dll
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\BLL.pdb
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\Entity.dll
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\EntityFramework.dll
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\Entity.pdb
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\EntityFramework.xml
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\obj\Debug\BLL.dll
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\obj\Debug\BLL.pdb
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\Dal.dll
+C:\Users\ADMIN\Desktop\WebDrummond\BLL\bin\Debug\Dal.pdb
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\obj\Debug\BLL.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\obj\Debug\BLL.pdb
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\BLL.dll.config
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\BLL.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\BLL.pdb
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\Dal.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\Entity.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\EntityFramework.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\Dal.pdb
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\Entity.pdb
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\EntityFramework.xml
+C:\Users\TECNOPARQUE\Documents\Visual Studio 2013\Projects\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\BLL.dll.config
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\BLL.dll
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\BLL.pdb
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\Dal.dll
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\Entity.dll
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.dll
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\Dal.pdb
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\Entity.pdb
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.xml
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\obj\Debug\BLL.dll
+C:\Users\TECNOPARQUE\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\obj\Debug\BLL.pdb
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\BLL.dll.config
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\BLL.dll
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\BLL.pdb
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\Dal.dll
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\Entity.dll
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.dll
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\Dal.pdb
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\Entity.pdb
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.xml
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\obj\Debug\BLL.dll
+D:\Drummond\ProyectoDRM\WebApplication1\BLL\obj\Debug\BLL.pdb
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\BLL.dll.config
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\BLL.dll
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\BLL.pdb
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\Dal.dll
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\Entity.dll
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.dll
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\Dal.pdb
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\Entity.pdb
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.xml
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\obj\Debug\BLL.dll
+C:\Users\TECNOPARQUE1\Documents\GitHub\ProyectoDRM\WebApplication1\BLL\obj\Debug\BLL.pdb
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\BLL.dll.config
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\BLL.dll
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\BLL.pdb
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\Dal.dll
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\Entity.dll
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\EntityFramework.dll
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\Dal.pdb
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\Entity.pdb
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\EntityFramework.xml
+C:\15-02-2016\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\15-02-2016\WebApplication1\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\15-02-2016\WebApplication1\BLL\obj\Debug\BLL.dll
+C:\15-02-2016\WebApplication1\BLL\obj\Debug\BLL.pdb
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\BLL.dll.config
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\BLL.dll
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\BLL.pdb
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\Dal.dll
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\Entity.dll
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\EntityFramework.dll
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\Dal.pdb
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\Entity.pdb
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\EntityFramework.xml
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\obj\Debug\BLL.dll
+C:\Users\TECNOPARQUE\Desktop\anexos\WebApplication1\BLL\obj\Debug\BLL.pdb
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\BLL.dll.config
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\BLL.dll
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\BLL.pdb
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\Dal.dll
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\Entity.dll
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\EntityFramework.dll
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\Dal.pdb
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\Entity.pdb
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\EntityFramework.xml
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\obj\Debug\BLL.dll
+C:\Users\ADMIN\Desktop\COPIA-DRM-3\WebApplication1\BLL\obj\Debug\BLL.pdb
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\BLL.dll.config
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\BLL.dll
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\BLL.pdb
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\Dal.dll
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\Entity.dll
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\EntityFramework.dll
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\Dal.pdb
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\Entity.pdb
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\EntityFramework.xml
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\obj\Debug\BLL.dll
+C:\Users\ADMIN\Desktop\WebApplication1\BLL\obj\Debug\BLL.pdb

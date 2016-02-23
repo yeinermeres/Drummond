@@ -1,0 +1,164 @@
+﻿
+<style type="text/css">
+    .contenedorb {
+        width: 90px;
+        height: 240px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+
+    .botonF1 {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background: #7cb342;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        border: none;
+        outline: none;
+        color: #FFF;
+        font-size: 36px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transition: .1s;
+    }
+
+        .botonF1:active {
+            transform: scale(1.1);
+        }
+</style>
+<div class="row wrapper border-bottom white-bg page-heading">
+<div class="col-lg-10">
+    <ol class="breadcrumb">
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+        <li>
+            <a>Datos basicos</a>
+        </li>
+        <li class="active">
+            <strong>Configuracion</strong>
+        </li>
+    </ol>
+</div>
+</div>
+<div class="wrapper wrapper-content animated fadeIn">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h2>Listado datos basicos</h2>
+                    <div class="hr-line-dashed"></div>
+                </div>
+                <div class="ibox-content">
+                        <table class="table table-striped " ng-table="ngTableParams" show-filter="true">
+                        <thead>
+                            <tr>
+                                <th filter="{ NOMBRE_CONFIG: 'text'}">Nombre</th>
+                                <th>Tipo</th>
+                                <th style="width:120px;text-align:center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="Config in Configs">
+                                <td>
+                                    {{Config.NOMBRE_CONFIG}}
+                                </td>
+                                <td class="center">
+                                    <span ng-switch="{{Config.TIPO_CONFIG}}">
+                                        <span ng-switch-when="1">Contrato</span>
+                                        <span ng-switch-when="2">Categoria</span>
+                                        <span ng-switch-when="3">Familia</span>
+                                    </span>
+                                </td>
+                                <td style="width:120px;text-align:center" class="center">
+                                    <a href="javasrcritp:;" title="Editar datos" ng-click="edit(config)"><i class="fa fa-edit" style="font-size:20px;color:#1A7BB9;padding-right:5px"></i></a>
+                                    <a href="javasrcritp:;" title="Anular Proyectos" ng-click="remove(config)"><i class="fa fa-trash" style="font-size:20px;color:#ED5565;margin-left:20px"></i></a>
+                                </td>
+                             </tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal inmodal" id="myModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content animated fadeIn">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Nuevo Registro</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                              <label>Tipo</label>
+                                <select class="form-control" ng-model="Config.TIPO_CONFIG" name="TIPO_CONFIG" id="TIPO_CONFIG">
+                                    <option></option>
+                                    <option value="1">Contrato</option>
+                                    <option value="2">Categoria</option>
+                                    <option value="3">Familia</option>
+                                </select>
+                                </div>
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" name="NOMBRE_CONFIG" class="form-control" ng-model="Config.NOMBRE_CONFIG" id="NOMBRE_CONFIG">
+                            </div>
+                            
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-white" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" ng-click="Add()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal inmodal" id="ModalEditar" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content animated fadeIn">
+                    <div class="modal-header">
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Tipo</label>
+                                <select class="form-control" ng-model="Config.TIPO_CONFIG" name="TIPO_CONFIG" id="TIPO_CONFIG">
+                                    <option></option>
+                                    <option value="1">Contrato</option>
+                                    <option value="2">Categoria</option>
+                                    <option value="3">Familia</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" name="NOMBRE_CONFIG" class="form-control" ng-model="Config.NOMBRE_CONFIG" id="NOMBRE_CONFIG">
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white" data-dismiss="modal" ng-click="cancel()">Cerrar</button>
+                        <button type="button" class="btn btn-primary" ng-click="update()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+    <div class="contenedorb" data-toggle="modal" data-target="#myModal4" ng-click="Nuevo()">
+        <button class="botonF1">
+            <i class="fa fa-plus" style="font-size:36px;"></i>
+        </button>
+    </div>
+</div>

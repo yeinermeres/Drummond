@@ -1,0 +1,149 @@
+﻿
+<style type="text/css">
+    .contenedorb {
+        width: 90px;
+        height: 240px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        position: fixed;
+    }
+
+    .botonF1 {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background: #7cb342;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        border: none;
+        outline: none;
+        color: #FFF;
+        font-size: 36px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transition: .1s;
+    }
+
+        .botonF1:active {
+            transform: scale(1.1);
+        }
+</style>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <a>Proyectos</a>
+            </li>
+            <li>
+                <strong>Proceso competitivo</strong>
+            </li>
+            <li class="active">
+                <strong>Detalle proceso competitivo</strong>
+            </li>
+        </ol>
+
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+        <div class="row">
+                <div class="col-lg-12">
+                    <div class="wrapper wrapper-content animated fadeInUp">
+                        <div class="ibox">
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="m-b-md">
+                                            <h2>{{Proyecto.PROYECTO}}</h2>
+                                        </div>
+                                        <dl class="dl-horizontal">
+                                            <dt>Complejidad:</dt>
+                                            <dd><span class="label label-danger">{{Proyecto.COMP_ADQUISICION}}</span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <dl class="dl-horizontal">
+                                            <dt>Projer manager:</dt>
+                                            <dd>{{Proyecto.MANAGER}}</dd>
+                                            <dt>Presupuesto:</dt>
+                                            <dd>{{Proyecto.PRESUPUESTO}}</dd>
+                                            <dt>Contraro</dt>
+                                            <dd style="color:#1FBE9E"><a class="text-navy"></a>{{Proyecto.CONTRATO}}</dd>
+                                            <dt>Area:</dt>
+                                            <dd> {{Proyecto.AREA}} </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="col-lg-7" id="cluster_info">
+                                        <dl class="dl-horizontal">
+                                            <dt>Categoria:</dt>
+                                            <dd>{{Proyecto.CATEGORIA}}</dd>
+                                            <dt>Tipo:</dt>
+                                            <dd> 	{{Proyecto.TIPO}} </dd>
+                                            <dt>Familia:</dt>
+                                            <dd class="project-people">
+                                                {{Proyecto.FAMILIA}}
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="row m-t-sm">
+                                    <div class="col-lg-12">
+                                        <div class="panel blank-panel">
+                                            <div class="panel-heading">
+                                                <div class="panel-options">
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active"><a href="" data-toggle="tab">Procesos Competitivos asociados</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="tab-1">
+                                                        <div class="feed-activity-list" data-ng-repeat="Proc_Competitivo in Proc_Competitivos">
+                                                            <div class="feed-element">
+                                                                <a href="" class="pull-left">
+                                                                    <img alt="image" class="img-circle" src="../../img/Folder.png">
+                                                                </a>
+                                                                <div class="media-body">
+                                                                    <small class="pull-right">Tiempo de Proceso {{Proc_Competitivo.TIEMPO_PROCESO}} días</small>
+                                                                    <strong>{{Proc_Competitivo.DETALLE_PS}}</strong><strong></strong><br>
+                                                                    <small class="text-muted">Fecha de Inicio :{{Proc_Competitivo.FECHA_INICO}}</small><br>
+                                                                    <small class="text-muted">Fecha Inicio de servicio :{{Proc_Competitivo.FECHA_INIC_SERVICE}}</small><br />
+                                                                    <small class="text">Valor estimado {{Proc_Competitivo.VALOR_ESTIMADO}}</small><br />
+                                                                    <small class="text">Tiempo ejecucion {{Proc_Competitivo.TIEMPO_EJECUCION}}</small>
+                                                                    <!---
+                                                                        <div class="well">
+                                                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                                                        Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                                                    </div>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                </div>
+            <div class="contenedorb">
+                <button class="botonF1" onclick="window.location = '/index.html#/Proyectos/Proyectos'">
+                    <i class="fa fa-mail-reply " style="font-size:36px;"></i>
+                </button>
+            </div>
+            </div>
