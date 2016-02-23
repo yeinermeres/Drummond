@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfiguracionBLL.cs" />
+    <Compile Include="OfertaMercantilBLL.cs" />
+    <Compile Include="PolizasBLL.cs" />
     <Compile Include="ProcompetitivoBLL.cs" />
     <Compile Include="PromanagerBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

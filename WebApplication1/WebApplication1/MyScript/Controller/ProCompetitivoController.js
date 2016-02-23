@@ -170,7 +170,6 @@
             //alert($scope.Proceso.FECHA_INIC_SERVICE);
     }
 
-
     $scope.visualizar = function () {
         document.getElementById("lista").innerHTML = "";
         var files = document.getElementById('files').files;
@@ -212,7 +211,6 @@
     }
 
     $scope.Cargartodo = function () {
-       alert('aa')
         var files = $("#files").get(0).files;
         var data = new FormData();
         for (i = 0; i < files.length; i++) {

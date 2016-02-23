@@ -32,6 +32,7 @@ var app;
                 })
                 .when('/OFM/REGOFM', {
                     templateUrl: 'OFM/GestionOFM.html',
+                    controller: "Ofertamercantilontroller"
 
                 })
                 .when('/OFM/OP', {

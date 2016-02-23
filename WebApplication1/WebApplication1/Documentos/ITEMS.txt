@@ -1,0 +1,26 @@
+IMPLEMENTDEFINICION DE CAPAS DE APLICACIONES FHIRACIÓN: SOLUCIÓN CON HL7-FHIR
+
+1 Revisión de la especificación y de Implementaciones de referencia del FHIR
+
+2 Implementaciones de Referencia
+
+3) Descripción de la solución FHIR
+
+2.1) Mapeo del Modelo de Datos
+   Mapeo de MessageType 
+   Identificación de Otros Recursos
+   Definición de los sistemas de Códigos
+   1) ENUM a Códigos de Recursos 
+   Especificación de Códigos  
+   Mapeo del Recurso de Communication 
+   Definición de extensiones y restricciones.
+	AUTORIZACIÓN DE SERVICIOS: PROFILE
+        NEGACIÓN DE SERVICIOS: PROFILE
+2.2) Mapeo de Servicios 
+ARQUITECTURA DE REFERENCIA PARA LAS APLICACIONES FHIR 
+DEFINICION DE CAPAS
+Arquitectura de Capas de Aplicaciones FHIR
+Clientes FHIR 
+Recursos Externos  
+DEFINICION DE LA ARQUITECTURA DE UNA APLICACION FHIR
+ANEXO

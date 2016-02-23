@@ -56,7 +56,21 @@
     <Compile Include="Migrations\201602230247383_L.Designer.cs">
       <DependentUpon>201602230247383_L.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602231529578_ofm.cs" />
+    <Compile Include="Migrations\201602231529578_ofm.Designer.cs">
+      <DependentUpon>201602231529578_ofm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602231606021_Polizas.cs" />
+    <Compile Include="Migrations\201602231606021_Polizas.Designer.cs">
+      <DependentUpon>201602231606021_Polizas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602232040473_poliza-cod.cs" />
+    <Compile Include="Migrations\201602232040473_poliza-cod.Designer.cs">
+      <DependentUpon>201602232040473_poliza-cod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Oferta_Mercantil.cs" />
+    <Compile Include="Polizas.cs" />
     <Compile Include="Proceso_Competitivo.cs" />
     <Compile Include="Proyectos.cs" />
     <Compile Include="ModelContex.cs" />
@@ -74,6 +88,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602230247383_L.resx">
       <DependentUpon>201602230247383_L.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602231529578_ofm.resx">
+      <DependentUpon>201602231529578_ofm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602231606021_Polizas.resx">
+      <DependentUpon>201602231606021_Polizas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602232040473_poliza-cod.resx">
+      <DependentUpon>201602232040473_poliza-cod.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

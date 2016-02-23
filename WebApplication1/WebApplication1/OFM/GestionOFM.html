@@ -59,14 +59,15 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="ibox float-e-margins">
-                    <div class="ibox-title" style="border-bottom:inset;border-top:inset;">
-                        <h5>Registrar Proyectos </h5>
+                    <div class="ibox-title">
+                        <h2>Gestion Oferta mercantil </h2>
+                        <div class="hr-line-dashed"></div>
                     </div>
                     <div class="tabs-container">
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="DatoBasic#tab-1"> Datos basicos</a></li>
                             <li class=""><a data-toggle="tab" href="DatoBasic#tab-2">Polizas</a></li>
-                            <li class=""><a data-toggle="tab" href="DatoBasic#tab-3">Documentos Adjuntos</a></li>
+                            <li class=""><a data-toggle="tab" href="DatoBasic#tab-3">Documentos</a></li>
                         </ul>
                         <div class="tab-content">
                             <div id="tab-1" class="tab-pane active">
@@ -135,16 +136,7 @@
                                         <label>Representante Legal del Contratista</label>
                                         <input type="text" placeholder="" class="form-control">
                                     </div>
-
                                     <div class="form-group col-lg-4">
-                                        <label>Proceso de Inicio</label>
-                                        <select class="form-control">
-                                            <option></option>
-                                            <option value="1">Hidrocarburos</option>
-                                            <option value="2">Administración</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-lg-3">
                                         <label>Tipo de Moneda</label>
                                         <select class="form-control">
                                             <option></option>
@@ -160,83 +152,91 @@
                                         <label>Valor Real</label>
                                         <input type="text" placeholder="" class="form-control">
                                     </div>
-                                    <div class="form-group col-lg-3">
-                                        <label>Tipo de Moneda</label>
-                                        <select class="form-control">
-                                            <option></option>
-                                            <option value="">A</option>
-                                            <option value="">B</option>
-                                            <option value="">C</option>
-                                            <option value="">D</option>
-                                        </select>
-                                    </div>
-                                    <center>
-                                        <button type="button" class="btn btn-primary">Registrar</button>
-                                    </center>
                                 </div>
                             </div>
 
                             <div id="tab-2" class="tab-pane">
                                 <div class="panel-body">
-                                    <div class="form-group col-lg-3">
-                                        <label>No de Polizas </label>
-                                        <input type="text" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="form-group col-lg-3" id="data_1">
-                                        <label class="font-noraml">Fecha de Inicio</label>
-                                        <div class="input-group date">
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Numero poliza</th>
+                                                    <th>Fecha inicio</th>
+                                                    <th>Fecha de Finalización</th>
+                                                    <th>Aseguradora</th>
+                                                    <th>Valor</th>
+                                                    <th>Tipo de Poliza</th>
+                                                    <th>Valor Asegurador</th>
+                                                    <th></th>
+                                                    <th colspan="3" style="text-align: center">Acciones</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr style="background-color: transparent">
+                                                    <td></td>
+                                                    <td><input type="text" placeholder="" class="form-control" ng-model="Poliza.COD_POLIZA"></td>
+
+                                                    <td style="width:180px;">
+                                                        <div class="form-group" id="data_2">
+                                                            <div class="input-group date">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span><input type="text" class="form-control" ng-model="Poliza.FECHA_INI_POL">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td style="width:180px;">
+                                                        <div class="form-group" id="data_3">
+                                                            <div class="input-group date">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-calendar"></i>
+                                                                </span><input type="text" class="form-control" ng-model="Poliza.FECHA_FINAL_POL">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td><input type="text" placeholder="" class="form-control" ng-model="Poliza.ASEGURADORA"></td>
+
+                                                    <td><input type="text" placeholder="" class="form-control" ng-model="Poliza.VALOR_POLIZA"></td>
+
+                                                    <td><input type="text" placeholder="" class="form-control" ng-model="Poliza.TIPO_POLIZA"></td>
+
+                                                    <td><input type="number" placeholder="" class="form-control" ng-model="Poliza.VALOR_ASEGURADO"></td>
+
+                                                    <td>
+                                                        
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-primary" title="guardar" id="guardar" ng-click="CargarPoliza();"><i class="fa fa-save"></i></button>
+                                                    </td>
+                                                    <td>
+                                                        <button class="btn btn-danger" title="Limpiar" id="limpiar" ng-click="limpiar();"><i class="fa fa-times"></i></button>
+                                                    </td>
+                                                </tr>    
+                                            </tbody>      
+                                        </table>
+                                        <div id="lispoliza">
+
                                         </div>
-                                    </div>
-
-                                    <div class="form-group col-lg-3" id="data_1">
-                                        <label class="font-noraml">Fecha de Finalización</label>
-                                        <div class="input-group date">
-                                            <span class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
-                                            </span><input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-lg-3">
-                                        <label>Aseguradora</label>
-                                        <input type="text" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="form-group col-lg-3">
-                                        <label>Valor</label>
-                                        <input type="text" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="form-group col-lg-3">
-                                        <label>Tipo de Seguro</label>
-                                        <input type="text" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="form-group col-lg-3">
-                                        <label>Valor Asegurador</label>
-                                        <input type="text" placeholder="" class="form-control">
-                                    </div>
-
-                                    <div class="form-group col-lg-3">
-                                        <label>Presupuesto Objetivo</label>
-                                        <input type="text" placeholder="" class="form-control">
-                                    </div>
-                                    <div class="form-group col-lg-12 ">
-                                        <center>
-                                            <button class="btn btn-primary " type="button"><i class="fa fa-upload"></i>&nbsp;&nbsp;<span class="bold">Cargar Polizas</span></button>
-
-
                                     </div>
                                     <br />
                                 </div>
                             </div>
                             <div id="tab-3" class="tab-pane">
                                 <div class="panel-body">
-                                    <div class="form-group col-lg-12">
-                                        <input type="file" name="file" id="file" class="inputfile  foo" /></center>
-                                    </div>
-                                    <br />
+                                    <section id="envio">
+                                        <form id="myForm">
+                                            <input type="file" id="files" name="files[]" onchange="angular.element(this).scope().visualizar()" multiple="multiple">
+                                        </form>
+                                    </section>
                                 </div>
                             </div>
+                        </div>
+                        <div class="panel-footer">
+                            <center><button type="button" class="btn btn-primary" ng-click="Add()">Registrar</button></center>
                         </div>
                     </div>
                 </div>
@@ -245,15 +245,8 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
 <script>
-    $(document).ready(function () {
+     $(document).ready(function () {
         $('#data_1 .input-group.date').datepicker({
             todayBtn: "linked",
             keyboardNavigation: false,
@@ -262,8 +255,20 @@
             autoclose: true
         });
 
+        $('#data_2 .input-group.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
+        });
+
+        $('#data_3 .input-group.date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
+        });
     });
-
 </script>
-
-
