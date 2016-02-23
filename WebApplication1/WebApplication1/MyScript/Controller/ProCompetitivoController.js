@@ -143,7 +143,7 @@
             loadRecord();
             localStorage.removeItem("PROYECTO")
         },
-        setTimeout(function () {$scope.Cargartodo },1000),
+        setTimeout(function () {$scope.Cargartodo()},1000),
         function (errorpl) {
             console.log(errorpl)
         });
@@ -212,6 +212,7 @@
     }
 
     $scope.Cargartodo = function () {
+       alert('aa')
         var files = $("#files").get(0).files;
         var data = new FormData();
         for (i = 0; i < files.length; i++) {
