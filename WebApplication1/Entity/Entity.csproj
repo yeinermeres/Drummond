@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspiranteProcesoEntity.cs" />
+    <Compile Include="AspirantesEntity.cs" />
     <Compile Include="ConfiguracionEntity.cs" />
     <Compile Include="ProcompetitivoEntity.cs" />
     <Compile Include="ProjerManagerEntity.cs" />

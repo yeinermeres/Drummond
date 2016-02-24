@@ -48,9 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspiranteProcesoBLL.cs" />
+    <Compile Include="AspirantesBLL.cs" />
     <Compile Include="ConfiguracionBLL.cs" />
-    <Compile Include="OfertaMercantilBLL.cs" />
-    <Compile Include="PolizasBLL.cs" />
     <Compile Include="ProcompetitivoBLL.cs" />
     <Compile Include="PromanagerBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -2,23 +2,34 @@
 
     $scope.visibilidadOff = false
     $scope.visibilidadOn = true
+
     archivos = [];
+
     $scope.Proceso = {};//Objeto actual
     $scope.Procesos = [];//Listado de Objetos
+
     var file;
     ///Datos proyectos
     $scope.Proyec = {};//Objeto actual
     $scope.Proyes = [];//Listado de Objetos
-    loadRecord();
+
+    $scope.Aspirante = {}; //Objeto Actual
+    $scope.Aspirantes = [];//Listado de Objetos
+
+    loadRecordProyectos();
+    loadRecordProcesos();
+    loadRecordAspirantes();
+    inicialize();
 
     $scope.CurrentDate = new Date();//Fecha actual
     inicialize();
 
-    loadRecordProyectos();
 
     function inicialize() {
         $scope.Proyec = {};
         $scope.Proceso = {};
+        $scope.Aspirante = {};
+
         $scope.Proyec.PROYECTO = "";
         $scope.Proyec.COMP_ADQUISICION = "";
         
@@ -49,7 +60,7 @@
            });
     }
 
-    function loadRecord() {
+    function loadRecordProcesos() {
         var promiseGet = ProcompetitivoServices.getAll(); //The Method Call from service
         promiseGet.then(function (pl) {
             $scope.Procesos = pl.data;
@@ -60,49 +71,33 @@
            });
     }
 
+    function loadRecordAspirantes() {
+        var promiseGet = ProcompetitivoServices.getAllAspirantes(); //The Method Call from service
+        promiseGet.then(function (pl) {
+            $scope.Aspirantes = pl.data;
+        },
+        function (errorPl) {
+            console.log('Error al cargar los datos almacenados', errorPl);
+        });
+    }
+
     $scope.LoadModal = function () {
         $('#modalproyectos').modal('show')
 
     }
 
-    $scope.Mostrar = function () {
-        $scope.visibilidadOff = true
-        $scope.visibilidadOn = false
+    $scope.LoadAspirantes = function () {
+        $('#modalAspirantes').modal('show');
 
-    }
-    
-    $scope.Cargar = function () {
-        $scope.Proyec = this.Proyec;
-        $scope.Proyec.PROYECTO = $scope.Proyec.PROYECTO;
-        $scope.Proceso.LUGAR_EJECUCION = $scope.Proyec.CONTRATO;
-        switch ($scope.Proyec.COMP_ADQUISICION) {
-            
-            case "A":
-                $scope.Proyec.COMP_ADQUISICION = 180;
-                calcularFI($scope.Proyec.COMP_ADQUISICION);
-                break;
-            case "B":
-                $scope.Proyec.COMP_ADQUISICION = 120;
-                calcularFI($scope.Proyec.COMP_ADQUISICION);
-                break;
-            case "C":
-                $scope.Proyec.COMP_ADQUISICION = 90;
-                calcularFI($scope.Proyec.COMP_ADQUISICION);
-                break
-            case "D":
-                $scope.Proyec.COMP_ADQUISICION = 60;
-                calcularFI($scope.Proyec.COMP_ADQUISICION);
-                break;
-        }
-        localStorage.setItem('PROYECTO', $scope.Proyec.PROYEC_ID)
-        $('#modalproyectos').modal('hide')
+        $scope.Proceso = this.Proceso;
+        localStorage.setItem('PROCESO', $scope.Proceso.ID_COMPETITIVO);
+
+        console.log("SELECCION PROCESO : " + $scope.Proceso.ID_COMPETITIVO)
     }
 
-    $scope.Ocultar = function () {
-        $scope.visibilidadOff = false
-        $scope.visibilidadOn = true
-
-    }
+    $scope.CerrarModal = function () {
+        $('#modalAspirantes').modal('hide')
+    }    
 
     $scope.Add = function () {
         var Proceso= {}
@@ -151,6 +146,100 @@
         
     };
 
+    $scope.CargarAsp = function () {
+        $scope.Aspirante = this.Aspirante;
+        localStorage.setItem('ASPIRANTE', $scope.Aspirante.ASPIRANTE_ID);        
+
+        console.log("SELECCION ASP : " + $scope.Aspirante.ASPIRANTE_ID)
+        swal({
+            title: "Mensaje de confirmación",
+            text: "¿Esta seguro que desea agregar este aspirante?" +
+            "\n" + $scope.Aspirante.NOM_RAZONSOCIAL,
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Si",
+            cancelButtonText: "No",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+            function (isConfirm) {
+                if (isConfirm) {                  
+                        var AspProceso = {};
+                        var DOCUMENTO_ASP = localStorage.getItem("ASPIRANTE");
+                        var DOCUMENTO_PRO = localStorage.getItem("PROCESO");
+
+                        AspProceso.ID_ASPIRANTE = DOCUMENTO_ASP;
+                        AspProceso.ID_PROCESO = DOCUMENTO_PRO;
+
+                        console.log("CONFIRMAR ID_ASPIRANTE " + DOCUMENTO_ASP);
+                        console.log("CONFIRMAR ID_COMPETITIVO " + DOCUMENTO_PRO);
+
+                        var result = ProcompetitivoServices.relacion(AspProceso);
+                        result.then(function () {
+                            setTimeout(function () {
+                                toastr.options = {
+                                    "closeButton": true,
+                                    "debug": false,
+                                    "progressBar": false,
+                                    "preventDuplicates": false,
+                                    "positionClass": "toast-bottom-full-width",
+                                    "onclick": null,
+                                    "showDuration": "400",
+                                    "hideDuration": "1000",
+                                    "timeOut": "7000",
+                                    "extendedTimeOut": "1000",
+                                    "showEasing": "swing",
+                                    "hideEasing": "linear",
+                                    "showMethod": "fadeIn",
+                                    "hideMethod": "fadeOut"
+                                };
+                            }, 1100);
+                            loadRecordProcesos();
+                            localStorage.removeItem("ASPIRANTE")
+                            localStorage.removeItem("PROCESO")
+
+                        },
+                        function (errorpl) {
+                            console.log(errorpl)
+                        });
+                    
+                    swal("Mensaje de Notificacion", "El Proceso fue realizado de manera exitosa.", "success");
+                } else {
+                    swal("Mensaje de Notificacion", "El Proceso no ha sido confirmado", "error");
+                }
+            });
+
+        $('#modalAspirantes').modal('hide');
+    };
+
+    $scope.Cargar = function () {
+        $scope.Proyec = this.Proyec;
+        $scope.Proyec.PROYECTO = $scope.Proyec.PROYECTO;
+        $scope.Proceso.LUGAR_EJECUCION = $scope.Proyec.CONTRATO;
+        switch ($scope.Proyec.COMP_ADQUISICION) {
+
+            case "A":
+                $scope.Proyec.COMP_ADQUISICION = 180;
+                calcularFI($scope.Proyec.COMP_ADQUISICION);
+                break;
+            case "B":
+                $scope.Proyec.COMP_ADQUISICION = 120;
+                calcularFI($scope.Proyec.COMP_ADQUISICION);
+                break;
+            case "C":
+                $scope.Proyec.COMP_ADQUISICION = 90;
+                calcularFI($scope.Proyec.COMP_ADQUISICION);
+                break
+            case "D":
+                $scope.Proyec.COMP_ADQUISICION = 60;
+                calcularFI($scope.Proyec.COMP_ADQUISICION);
+                break;
+        }
+        localStorage.setItem('PROYECTO', $scope.Proyec.PROYEC_ID)
+        $('#modalproyectos').modal('hide')
+    }
+
     var calcularFI = function (dias) {
         $scope.YearAct = $scope.CurrentDate.getFullYear();
         $scope.MesAct = ('0' + ($scope.CurrentDate.getMonth()+1)).slice(-2);
@@ -168,6 +257,17 @@
             
             $scope.Proceso.FECHA_INIC_SERVICE = ('0' + (result.getDate())).slice(-2) + "/" + ('0' + (result.getMonth() + 1)).slice(-2) + "/" + result.getFullYear();
             //alert($scope.Proceso.FECHA_INIC_SERVICE);
+    }
+
+    $scope.Mostrar = function () {
+        $scope.visibilidadOff = true
+        $scope.visibilidadOn = false
+    }
+
+    $scope.Ocultar = function () {
+        $scope.visibilidadOff = false
+        $scope.visibilidadOn = true
+
     }
 
     $scope.visualizar = function () {
@@ -211,6 +311,7 @@
     }
 
     $scope.Cargartodo = function () {
+       alert('aa')
         var files = $("#files").get(0).files;
         var data = new FormData();
         for (i = 0; i < files.length; i++) {

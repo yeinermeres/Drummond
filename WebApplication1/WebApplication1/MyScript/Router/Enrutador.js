@@ -29,10 +29,10 @@ var app;
                 })
                 .when('/Proyectos/RegistroAspirante', {
                     templateUrl: 'Proyectos/ProcesoCompetitivo/RegistroAspirante.html',
+                    controller: 'AspiranteController'
                 })
                 .when('/OFM/REGOFM', {
                     templateUrl: 'OFM/GestionOFM.html',
-                    controller: "Ofertamercantilontroller"
 
                 })
                 .when('/OFM/OP', {

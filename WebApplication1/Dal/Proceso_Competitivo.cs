@@ -30,5 +30,8 @@ namespace Dal
 
         [ForeignKey("PROCESO_ARCHIVO")]
          public virtual ICollection<Archivo_Ruta> Ruta_Achivo { get; set; }
+
+        [ForeignKey("ID_PROCESO")]
+        public virtual ICollection<AspiranteProceso> AspiranteProceso { get; set; }
     }
 }
