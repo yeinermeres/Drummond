@@ -146,6 +146,11 @@ app.service("ProcompetitivoServices", function ($http) {
         return req;
     };
 
+    this.get = function (id) {
+        var req = $http.get(uri + '/api/Procompetitivo/' + id);
+        return req;
+    };
+
     this.delete = function (id) {
         var request = $http({
             method: "delete",

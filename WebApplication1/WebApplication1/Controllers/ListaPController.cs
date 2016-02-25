@@ -29,41 +29,27 @@ namespace WebApplication1.Controllers
             using (var contex = new ModelContex())
             {
                 AspiranteProceso ap = new AspiranteProceso();
+                var ctx = contex.Aspirantes.Max(c => c.ASPIRANTE_ID);
 
-                if (ap.ID_ASPIRANTE.Equals(0))
+                var request = HttpContext.Current.Request;
+                if (request.Files.Count > 0)
                 {
-                    var ctx = contex.Aspirantes.Max(c => c.ASPIRANTE_ID);
-                    var request = HttpContext.Current.Request;
-                    if (request.Files.Count > 0)
+                    foreach (string file in request.Files)
                     {
-                        foreach (string file in request.Files)
-                        {
-                            var postedFile = request.Files[file];
-                            var filePath = HttpContext.Current.Server.MapPath(string.Format("~/Documentos/{0}", postedFile.FileName));
-                            ap.ID_ASPIRANTE = ctx;
-                            ap.RUTA = filePath;
-                            contex.AspiranteProceso.Add(ap);
-                            contex.SaveChanges();
-                            postedFile.SaveAs(filePath);
-                        }
-                        return Ok(true);
+                        var postedFile = request.Files[file];
+                        var filePath = HttpContext.Current.Server.MapPath(string.Format("~/Documentos/{0}", postedFile.FileName));
+                        ap.ID_ASPIRANTE = ctx;
+                        ap.RUTA = filePath;
+                        contex.AspiranteProceso.Add(ap);
+                        contex.SaveChanges();
+                        postedFile.SaveAs(filePath);
                     }
-                    else
-                    {
-                        return BadRequest();
-                    }
-
-                    
+                    return Ok(true);
                 }
                 else
                 {
-                    contex.AspiranteProceso.Add(ap);
-                    contex.SaveChanges();
-
                     return BadRequest();
                 }
-
-                
             }
         }
 

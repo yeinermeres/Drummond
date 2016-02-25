@@ -1,7 +1,17 @@
-﻿app.controller('ProCompetitivoController', function ($scope, ProcompetitivoServices) {
+﻿app.controller('ProCompetitivoController', function ($scope, ProcompetitivoServices, $rootScope) {
 
     $scope.visibilidadOff = false
     $scope.visibilidadOn = true
+
+    $rootScope.ProCompetitivo;
+
+    $rootScope.AspProceso;
+
+    ///Objetos para matener los datos al cambiar de pagina
+    //$rootScope.Proc_Competitivo = {};
+    //$rootScope.Proc_Competitivos = [];
+
+    $rootScope.AspirantesPros = [];
 
     archivos = [];
 
@@ -17,7 +27,7 @@
     $scope.Aspirantes = [];//Listado de Objetos
 
     loadRecordProyectos();
-    loadRecordProcesos();
+    loadRecords();
     loadRecordAspirantes();
     inicialize();
 
@@ -60,7 +70,7 @@
            });
     }
 
-    function loadRecordProcesos() {
+    function loadRecords() {
         var promiseGet = ProcompetitivoServices.getAll(); //The Method Call from service
         promiseGet.then(function (pl) {
             $scope.Procesos = pl.data;
@@ -75,6 +85,19 @@
         var promiseGet = ProcompetitivoServices.getAllAspirantes(); //The Method Call from service
         promiseGet.then(function (pl) {
             $scope.Aspirantes = pl.data;
+        },
+        function (errorPl) {
+            console.log('Error al cargar los datos almacenados', errorPl);
+        });
+    }
+
+
+
+    function loadRecordsAspirantes(id) {
+        var promiseGet = ProcompetitivoServices.get(id); //The Method Call from service
+        promiseGet.then(function (pl) {
+            $rootScope.AspirantesPros = pl.data;
+            console.log($rootScope.AspirantesPros)
         },
         function (errorPl) {
             console.log('Error al cargar los datos almacenados', errorPl);
@@ -135,7 +158,8 @@
             };
             toastr.success("Se realizado el registro de manera exitosa.", "Notificaciones");
             inicialize();
-            loadRecord();
+            loadRecords();
+            $scope.Ocultar();
             localStorage.removeItem("PROYECTO")
         },
         setTimeout(function () {$scope.Cargartodo()},1000),
@@ -332,5 +356,11 @@
                 }
             }
         });
+    }
+
+    $scope.detalle = function () {
+        $rootScope.ProCompetitivo = this.Proceso;
+        loadRecordsAspirantes($rootScope.ProCompetitivo.ID_COMPETITIVO);
+        console.log("id c"+$rootScope.ProCompetitivo.ID_COMPETITIVO)
     }
 });

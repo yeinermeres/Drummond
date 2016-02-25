@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Dal;
+using Entity;
 using Entity.VISTAS;
 using System;
 using System.Collections.Generic;
@@ -21,9 +22,9 @@ namespace WebApplication1.Controllers
         }
 
         // GET: api/Procompetitivo/5
-        public string Get(int id)
+        public List<AspirantesEntity> Get(int id)
         {
-            return "value";
+            return proc.GetAspirantes(id);
         }
 
         // POST: api/Procompetitivo

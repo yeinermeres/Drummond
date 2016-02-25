@@ -13,5 +13,7 @@ namespace Dal
         public int ID_ASPIRANTE { get; set; }
         public int ID_PROCESO { get; set; }
         public string RUTA { get; set; }
+
+        //public virtual Aspirantes Aspirante { get; set; }
     }
 }

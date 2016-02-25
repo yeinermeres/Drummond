@@ -290,6 +290,7 @@
         $scope.manager = this.manager;
         $rootScope.Proyecto = this.Proyec;
         loadRecordsProcesos($rootScope.Proyecto.PROYEC_ID);
+        console.log($rootScope.Proyecto.PROYEC_ID)
     }
 
 });

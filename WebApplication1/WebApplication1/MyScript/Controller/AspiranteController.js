@@ -41,6 +41,7 @@
 
         console.log("CONFIRMAR ID_ASPIRANTE " + $scope.Asp.ID_ASPIRANTE);
         console.log("CONFIRMAR ID_COMPETITIVO " + DOCUMENTO_PRO);
+        console.log("RUTA ");
 
         var result = AspiranteServices.relacion(AspProceso);
         result.then(function () {
@@ -68,12 +69,12 @@
 
             window.location = "#/Proyectos/ProCompetitivo"
         },
+        /*PENDIENTE
+        setTimeout(function () { $scope.Cargartodo() }, 1000),
+        */
         function (errorpl) {
             console.log(errorpl)
-        });
-        /*PENDIENTE
-        setTimeout(function () { $scope.Cargartodo() }, 1100)
-        */
+        });        
     }
 
     $scope.Add = function () {
@@ -111,11 +112,12 @@
             }, 1100);
             loadRecords();
         },
+        setTimeout(function () { relacion() }, 1100),
         function (errorpl) {
             console.log(errorpl)
         });
         
-        setTimeout(function () { relacion() }, 1100)
+        
     };
         
     $scope.visualizar = function () {
@@ -161,10 +163,10 @@
         for (i = 0; i < files.length; i++) {
             data.append("file" + i, files[i]);
         }
-
+        
         $.ajax({
             type: "POST",
-            url: "api/listap",
+            url: "/api/listap",
             contentType: false,
             processData: false,
             data: data,
@@ -176,6 +178,7 @@
                 }
             }
         });
+        
     }
 
 });

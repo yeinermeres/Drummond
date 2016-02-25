@@ -86,10 +86,11 @@
                                     <td class="center">{{Proceso.FECHA_INIC_SERVICE}}</td>
                                     <td class="center" style="text-align:center">{{Proceso.TIEMPO_EJECUCION}} días</td>
                                     <td>
-                                        <a href="#/DetalleCompetitivo" title="Ver detalle" ng-click=""><i class="fa fa-eye" style="font-size:20px;color:#1A7BB9;"></i></a>
+                                        <a href="#/DetalleCompetitivo" title="Ver detalle" ng-click="detalle()"><i class="fa fa-eye" style="font-size:20px;color:#1A7BB9;"></i></a>
+                                        
                                     </td>
                                     <td style="text-align:center;">
-                                      <a href="javasrcritp:;" title="Editar Proceso Competitivo" ng-click="cargarModificar(item)"><i class="fa fa-edit" style="font-size:20px;color:#1A7BB9;"></i></a>
+                                        <a href="javasrcritp:;" title="Editar Proceso Competitivo" ng-click="cargarModificar(item)"><i class="fa fa-edit" style="font-size:20px;color:#1A7BB9;"></i></a>
                                         <a href="" title="Anular Proceso Competitivo" ng-click="LoadAspirantes()"><i class="fa fa-plus-circle" style="font-size:20px;color:#ED5565;margin-left:2px"></i></a>
                                     </td>
                                 </tr>
